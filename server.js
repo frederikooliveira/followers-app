@@ -4,7 +4,7 @@ const app = express();
 var port = process.env.PORT || 8000;
 const path = require('path');
 
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.all('*', (req, res) => {
   const page = path.join(__dirname, 'dist', 'index.html');
