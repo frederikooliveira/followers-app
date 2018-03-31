@@ -9,6 +9,6 @@ app.all('*', (req, res) => {
   res.status(200).sendFile(__dirname + '/dist/index.html');
 });
 
-server.listen(port, function() {
+app.listen(port, function() {
   console.log("App is running on port " + port);
 });
